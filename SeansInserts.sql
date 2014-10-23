@@ -76,5 +76,5 @@ INSERT INTO Test(Registration, TestNo, TestDate, CentreName) VALUES('12-D-12345'
 INSERT INTO Test(Registration, TestNo, TestDate, CentreName) VALUES('06-D-51234', 006, TO_DATE('2012-08-12', 'YYYY-MM-DD'), 'Swords Centre');
 
 --Test Part
-INSERT
+INSERT INTO TestPart(PartName, TestPartPassed, PartComment, MechanincName, TestNo) VALUES();
 
