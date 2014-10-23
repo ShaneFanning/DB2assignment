@@ -57,13 +57,13 @@ INSERT INTO Letters(Registration, DateSent, ClerkName, Name, Address, OwnerID) V
 
 --Mechanic inserts
 
-INSERT INTO Mechanic(MechanicName, Speciality, Availability, CentreName) VALUES('Mark Wahlberg', 'Engines', TRUE, 'Swords Centre');
-INSERT INTO Mechanic(MechanicName, Speciality, Availability, CentreName) VALUES('Jackie Chan', 'Engines', TRUE, 'Rathgar Centre');
-INSERT INTO Mechanic(MechanicName, Speciality, Availability, CentreName) VALUES('Baby Goose', 'Brakes', TRUE, 'Rathgar Centre');
-INSERT INTO Mechanic(MechanicName, Speciality, Availability, CentreName) VALUES('Bertie Ahern', 'Brakes', FALSE, 'Swords Centre');
-INSERT INTO Mechanic(MechanicName, Speciality, Availability, CentreName) VALUES('Bruce Billson', 'Chasis', TRUE, 'Swords Centre');
-INSERT INTO Mechanic(MechanicName, Speciality, Availability, CentreName) VALUES('Ivan Ivanson', 'Chasis', FALSE, 'Rathgar Centre');
-INSERT INTO Mechanic(MechanicName, Speciality, Availability, CentreName) VALUES('Jiminy Cricket', 'Interior', TRUE, 'Swords Centre');
+INSERT INTO Mechanic(MechanicName, Speciality, Availability, CentreName) VALUES('Mark Wahlberg', 'Engines', 1, 'Swords Centre');
+INSERT INTO Mechanic(MechanicName, Speciality, Availability, CentreName) VALUES('Jackie Chan', 'Engines', 1, 'Rathgar Centre');
+INSERT INTO Mechanic(MechanicName, Speciality, Availability, CentreName) VALUES('Baby Goose', 'Brakes', 1, 'Rathgar Centre');
+INSERT INTO Mechanic(MechanicName, Speciality, Availability, CentreName) VALUES('Bertie Ahern', 'Brakes', 0, 'Swords Centre');
+INSERT INTO Mechanic(MechanicName, Speciality, Availability, CentreName) VALUES('Bruce Billson', 'Chasis', 1, 'Swords Centre');
+INSERT INTO Mechanic(MechanicName, Speciality, Availability, CentreName) VALUES('Ivan Ivanson', 'Chasis', 0, 'Rathgar Centre');
+INSERT INTO Mechanic(MechanicName, Speciality, Availability, CentreName) VALUES('Jiminy Cricket', 'Interior', 1, 'Swords Centre');
 
 --Test inserts
 
