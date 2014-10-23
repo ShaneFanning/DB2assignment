@@ -3,13 +3,13 @@
 
 --Owner Inserts
 
-INSERT INTO Owner (OwnerID, Name, Address) VALUES (100, 'Mark Flanagan', '123 Fake Street');
-INSERT INTO Owner (OwnerID, Name, Address) VALUES (101, 'Sean Boomington', '108 Johnstown Avenue');
-INSERT INTO Owner (OwnerID, Name, Address) VALUES (102, 'Shane Fanning', '102 Lad Lane');
-INSERT INTO Owner (OwnerID, Name, Address) VALUES (103, 'Ron Swanson', '56 Unknown Road');
-INSERT INTO Owner (OwnerID, Name, Address) VALUES (104, 'Leslie Knope', '10 Birdwalk Park');
-INSERT INTO Owner (OwnerID, Name, Address) VALUES (105, 'Tom Dwan', '37 Cypress Hill');
-INSERT INTO Owner (OwnerID, Name, Address) VALUES (106, 'Antonio Esfandiari', '40 Green Street');
+INSERT INTO Owner (OwnerID, OwnerName, Address) VALUES (100, 'Mark Flanagan', '123 Fake Street');
+INSERT INTO Owner (OwnerID, OwnerName, Address) VALUES (101, 'Sean Boomington', '108 Johnstown Avenue');
+INSERT INTO Owner (OwnerID, OwnerName, Address) VALUES (102, 'Shane Fanning', '102 Lad Lane');
+INSERT INTO Owner (OwnerID, OwnerName, Address) VALUES (103, 'Ron Swanson', '56 Unknown Road');
+INSERT INTO Owner (OwnerID, OwnerName, Address) VALUES (104, 'Leslie Knope', '10 Birdwalk Park');
+INSERT INTO Owner (OwnerID, OwnerName, Address) VALUES (105, 'Tom Dwan', '37 Cypress Hill');
+INSERT INTO Owner (OwnerID, OwnerName, Address) VALUES (106, 'Antonio Esfandiari', '40 Green Street');
 
 --Car inserts
 
@@ -23,13 +23,13 @@ INSERT INTO Car(Registration, Make, Year_of_Manufacture, OwnerID) VALUES('09-C-6
 
 --CarRecord Inserts
 
-INSERT INTO CarRecord(Registration, DateLastTest, NumOfFails, IsDestroyed) VALUES('12-D-12345', TO_DATE('2013-03-01', 'YYYY-MM-DD'), 0, FALSE);
-INSERT INTO CarRecord(Registration, DateLastTest, NumOfFails, IsDestroyed) VALUES('06-D-51234', TO_DATE('2009-06-09', 'YYYY-MM-DD'), 1, FALSE);
-INSERT INTO CarRecord(Registration, DateLastTest, NumOfFails, IsDestroyed) VALUES('07-W-45123', TO_DATE('2008-02-05', 'YYYY-MM-DD'), 0, FALSE);
-INSERT INTO CarRecord(Registration, DateLastTest, NumOfFails, IsDestroyed) VALUES('08-KE-34512', TO_DATE('2009-10-04', 'YYYY-MM-DD'), 0, FALSE);
-INSERT INTO CarRecord(Registration, DateLastTest, NumOfFails, IsDestroyed) VALUES('90-D-23451', TO_DATE('2014-02-02', 'YYYY-MM-DD'), 2, FALSE);
-INSERT INTO CarRecord(Registration, DateLastTest, NumOfFails, IsDestroyed) VALUES('05-D-23456', TO_DATE('2010-01-01', 'YYYY-MM-DD'), 1, FALSE);
-INSERT INTO CarRecord(Registration, DateLastTest, NumOfFails, IsDestroyed) VALUES('09-C-62345', TO_DATE('2011-02-09', 'YYYY-MM-DD'), 3, TRUE);
+INSERT INTO CarRecord(Registration, DateLastTest, NumOfFails, IsDestroyed) VALUES('12-D-12345', TO_DATE('2013-03-01', 'YYYY-MM-DD'), 0, 0);
+INSERT INTO CarRecord(Registration, DateLastTest, NumOfFails, IsDestroyed) VALUES('06-D-51234', TO_DATE('2009-06-09', 'YYYY-MM-DD'), 1, 0);
+INSERT INTO CarRecord(Registration, DateLastTest, NumOfFails, IsDestroyed) VALUES('07-W-45123', TO_DATE('2008-02-05', 'YYYY-MM-DD'), 0, 0);
+INSERT INTO CarRecord(Registration, DateLastTest, NumOfFails, IsDestroyed) VALUES('08-KE-34512', TO_DATE('2009-10-04', 'YYYY-MM-DD'), 0, 0);
+INSERT INTO CarRecord(Registration, DateLastTest, NumOfFails, IsDestroyed) VALUES('90-D-23451', TO_DATE('2014-02-02', 'YYYY-MM-DD'), 2, 0);
+INSERT INTO CarRecord(Registration, DateLastTest, NumOfFails, IsDestroyed) VALUES('05-D-23456', TO_DATE('2010-01-01', 'YYYY-MM-DD'), 1, 0);
+INSERT INTO CarRecord(Registration, DateLastTest, NumOfFails, IsDestroyed) VALUES('09-C-62345', TO_DATE('2011-02-09', 'YYYY-MM-DD'), 3, 1);
 
 --Supervisor inserts
 
@@ -50,20 +50,20 @@ INSERT INTO ClericalOfficer(ClerkName, CentreName) VALUES('Mike Hunt', 'Swords C
 
 --Letter inserts
 
-INSERT INTO Letters(Registration, DateSent, ClerkName, Name, Address, OwnerID) VALUES('06-D-51234', TO_DATE('2010-05-09', 'YYYY-MM-DD'), , , ,101);
-INSERT INTO Letters(Registration, DateSent, ClerkName, Name, Address, OwnerID) VALUES('07-W-45123', TO_DATE('2010-05-09', 'YYYY-MM-DD'), , , ,);
-INSERT INTO Letters(Registration, DateSent, ClerkName, Name, Address, OwnerID) VALUES(, TO_DATE('2010-05-09', 'YYYY-MM-DD'), , , ,);
-INSERT INTO Letters(Registration, DateSent, ClerkName, Name, Address, OwnerID) VALUES(, TO_DATE('2010-05-09', 'YYYY-MM-DD'), , , ,);
+INSERT INTO Letters(Registration, DateSent, ClerkName, OwnerName, Address, OwnerID) VALUES('06-D-51234', TO_DATE('2010-05-09', 'YYYY-MM-DD'), , , ,101);
+INSERT INTO Letters(Registration, DateSent, ClerkName, OwnerName, Address, OwnerID) VALUES('07-W-45123', TO_DATE('2010-05-09', 'YYYY-MM-DD'), , , ,);
+INSERT INTO Letters(Registration, DateSent, ClerkName, OwnerName, Address, OwnerID) VALUES(, TO_DATE('2010-05-09', 'YYYY-MM-DD'), , , ,);
+INSERT INTO Letters(Registration, DateSent, ClerkName, OwnerName, Address, OwnerID) VALUES(, TO_DATE('2010-05-09', 'YYYY-MM-DD'), , , ,);
 
 --Mechanic inserts
 
-INSERT INTO Mechanic(MechanicName, Speciality, Availability, CentreName) VALUES('Mark Wahlberg', 'Engines', 1, 'Swords Centre');
-INSERT INTO Mechanic(MechanicName, Speciality, Availability, CentreName) VALUES('Jackie Chan', 'Engines', 1, 'Rathgar Centre');
-INSERT INTO Mechanic(MechanicName, Speciality, Availability, CentreName) VALUES('Baby Goose', 'Brakes', 1, 'Rathgar Centre');
-INSERT INTO Mechanic(MechanicName, Speciality, Availability, CentreName) VALUES('Bertie Ahern', 'Brakes', 0, 'Swords Centre');
-INSERT INTO Mechanic(MechanicName, Speciality, Availability, CentreName) VALUES('Bruce Billson', 'Chasis', 1, 'Swords Centre');
-INSERT INTO Mechanic(MechanicName, Speciality, Availability, CentreName) VALUES('Ivan Ivanson', 'Chasis', 0, 'Rathgar Centre');
-INSERT INTO Mechanic(MechanicName, Speciality, Availability, CentreName) VALUES('Jiminy Cricket', 'Interior', 1, 'Swords Centre');
+INSERT INTO Mechanic(MechanicName, Speciality, MechAvailability, CentreName) VALUES('Mark Wahlberg', 'Engines', 1, 'Swords Centre');
+INSERT INTO Mechanic(MechanicName, Speciality, MechAvailability, CentreName) VALUES('Jackie Chan', 'Engines', 1, 'Rathgar Centre');
+INSERT INTO Mechanic(MechanicName, Speciality, MechAvailability, CentreName) VALUES('Baby Goose', 'Brakes', 1, 'Rathgar Centre');
+INSERT INTO Mechanic(MechanicName, Speciality, MechAvailability, CentreName) VALUES('Bertie Ahern', 'Brakes', 0, 'Swords Centre');
+INSERT INTO Mechanic(MechanicName, Speciality, MechAvailability, CentreName) VALUES('Bruce Billson', 'Chasis', 1, 'Swords Centre');
+INSERT INTO Mechanic(MechanicName, Speciality, MechAvailability, CentreName) VALUES('Ivan Ivanson', 'Chasis', 0, 'Rathgar Centre');
+INSERT INTO Mechanic(MechanicName, Speciality, MechAvailability, CentreName) VALUES('Jiminy Cricket', 'Interior', 1, 'Swords Centre');
 
 --Test inserts
 
