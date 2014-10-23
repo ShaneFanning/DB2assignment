@@ -35,9 +35,9 @@ ALTER TABLE Car
 CREATE TABLE CarRecord
 (
 	Registration         VARCHAR2(20) NOT NULL ,
-	Date_of_Last_Test    DATE NULL ,
-	No._of_Fails         INTEGER NULL ,
-	Is_Destroyed         SMALLINT NULL 
+	DateLastTest         DATE NULL ,
+	NumOfFails           INTEGER NULL ,
+	IsDestroyed          BOOLEAN NULL 
 );
 
 ALTER TABLE CarRecord
@@ -56,7 +56,7 @@ CREATE TABLE Mechanic
 (
 	MechanicName         VARCHAR2(20) NOT NULL ,
 	Speciality           VARCHAR2(20) NULL ,
-	Availability         SMALLINT NULL ,
+	Availability         BOOLEAN NULL ,
 	CentreName           VARCHAR2(20) NOT NULL 
 );
 
@@ -76,7 +76,7 @@ ALTER TABLE Owner
 CREATE TABLE Letters
 (
 	Registration         VARCHAR2(20) NOT NULL ,
-	Date                 DATE NOT NULL ,
+	DateSent             DATE NOT NULL ,
 	ClerkName            VARCHAR2(20) NOT NULL ,
 	Name                 VARCHAR2(20) NULL ,
 	Address              VARCHAR2(40) NULL ,
@@ -84,7 +84,7 @@ CREATE TABLE Letters
 );
 
 ALTER TABLE Letters
-	ADD CONSTRAINT  XPKLetters PRIMARY KEY (Registration,Date);
+	ADD CONSTRAINT  XPKLetters PRIMARY KEY (Registration,DateSent);
 
 CREATE TABLE Supervisor
 (
@@ -98,15 +98,15 @@ ALTER TABLE Supervisor
 CREATE TABLE Test
 (
 	Registration         VARCHAR2(20) NOT NULL ,
-	Test_No.             INTEGER NOT NULL ,
-	TestPassed           SMALLINT NULL ,
-	Coment               VARCHAR2(150) NULL ,
+	TestNo               INTEGER NOT NULL ,
+	TestPassed           BOOLEAN NULL ,
+	TestComment          VARCHAR2(150) NULL ,
 	TestDate             DATE NULL ,
 	CentreName           VARCHAR2(20) NOT NULL 
 );
 
 ALTER TABLE Test
-	ADD CONSTRAINT  XPKTest PRIMARY KEY (Test_No.);
+	ADD CONSTRAINT  XPKTest PRIMARY KEY (TestNo);
 
 CREATE TABLE TestCentre
 (
@@ -121,24 +121,24 @@ ALTER TABLE TestCentre
 CREATE TABLE TestPart
 (
 	PartName             VARCHAR2(20) NOT NULL ,
-	TestPartPassed       SMALLINT NULL ,
+	TestPartPassed       BOOLEAN NULL ,
 	PartComent           CHAR(18) NULL ,
 	MechanicName         VARCHAR2(20) NULL ,
-	Test_No.             INTEGER NOT NULL 
+	TestNo             INTEGER NOT NULL 
 );
 
 ALTER TABLE TestPart
-	ADD CONSTRAINT  XPKTestPart PRIMARY KEY (Test_No.,PartName);
+	ADD CONSTRAINT  XPKTestPart PRIMARY KEY (TestNo, PartName);
 
 CREATE TABLE Criticality
 (
 	CriticalityLevel     CHAR(10) NOT NULL ,
 	PartName             VARCHAR2(20) NOT NULL ,
-	Test_No.             INTEGER NOT NULL 
+	TestNo             INTEGER NOT NULL 
 );
 
 ALTER TABLE Criticality
-	ADD CONSTRAINT  XPKCriticality PRIMARY KEY (PartName,Test_No.);
+	ADD CONSTRAINT  XPKCriticality PRIMARY KEY (PartName,TestNo);
 
 ALTER TABLE Car
 	ADD (CONSTRAINT R_7 FOREIGN KEY (OwnerID) REFERENCES Owner (OwnerID));
@@ -168,10 +168,10 @@ ALTER TABLE TestCentre
 	ADD (CONSTRAINT R_19 FOREIGN KEY (SuperVisorID) REFERENCES Supervisor (SuperVisorID));
 
 ALTER TABLE TestPart
-	ADD (CONSTRAINT R_3 FOREIGN KEY (Test_No.) REFERENCES Test (Test_No.));
+	ADD (CONSTRAINT R_3 FOREIGN KEY (TestNo) REFERENCES Test (TestNo));
 
 ALTER TABLE TestPart
 	ADD (CONSTRAINT R_4 FOREIGN KEY (MechanicName) REFERENCES Mechanic (MechanicName));
 
 ALTER TABLE Criticality
-	ADD (CONSTRAINT R_22 FOREIGN KEY (Test_No., PartName) REFERENCES TestPart (Test_No., PartName));
+	ADD (CONSTRAINT R_22 FOREIGN KEY (TestNo, PartName) REFERENCES TestPart (TestNo, PartName));
