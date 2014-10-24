@@ -14,8 +14,8 @@ INSERT INTO Owner (OwnerID, OwnerName, Address) VALUES (106, 'Antonio Esfandiari
 --Car inserts
 
 INSERT INTO Car(Registration, Make, Year_of_Manufacture, OwnerID) VALUES('12-D-12345', 'BMW', TO_DATE('2012-10-11', 'YYYY-MM-DD'), 100);
-INSERT INTO Car(Registration, Make, Year_of_Manufacture, OwnerID) VALUES('06-D-51234', 'Mercedes', TO_DATE('2012-08-12', 'YYYY-MM-DD'), 101);
-INSERT INTO Car(Registration, Make, Year_of_Manufacture, OwnerID) VALUES('07-W-45123', 'BMW', TO_DATE('2012-09-12', 'YYYY-MM-DD'), 102);
+INSERT INTO Car(Registration, Make, Year_of_Manufacture, OwnerID) VALUES('06-D-51234', 'Mercedes', TO_DATE('2006-08-12', 'YYYY-MM-DD'), 101);
+INSERT INTO Car(Registration, Make, Year_of_Manufacture, OwnerID) VALUES('07-W-45123', 'BMW', TO_DATE('2007-09-12', 'YYYY-MM-DD'), 102);
 INSERT INTO Car(Registration, Make, Year_of_Manufacture, OwnerID) VALUES('08-KE-34512', 'Mercedes', TO_DATE('2008-08-12', 'YYYY-MM-DD'), 103);
 INSERT INTO Car(Registration, Make, Year_of_Manufacture, OwnerID) VALUES('90-D-23451', 'Porsche', TO_DATE('1990-03-10', 'YYYY-MM-DD'), 104);
 INSERT INTO Car(Registration, Make, Year_of_Manufacture, OwnerID) VALUES('05-D-23456', 'BMW', TO_DATE('2005-04-11', 'YYYY-MM-DD'), 105);
@@ -50,9 +50,9 @@ INSERT INTO ClericalOfficer(ClerkName, CentreName) VALUES('Mike Hunt', 'Swords C
 
 --Letter inserts
 
-INSERT INTO Letters(Registration, DateSent, ClerkName, OwnerName, Address, OwnerID) VALUES('06-D-51234', TO_DATE('2010-05-09', 'YYYY-MM-DD'), 'Pepe Hennesy', 'Sean Boomington', '108 Johnstown Avenue',101);
-INSERT INTO Letters(Registration, DateSent, ClerkName, OwnerName, Address, OwnerID) VALUES('07-W-45123', TO_DATE('2010-05-09', 'YYYY-MM-DD'), , , ,);
-INSERT INTO Letters(Registration, DateSent, ClerkName, OwnerName, Address, OwnerID) VALUES(, TO_DATE('2010-05-09', 'YYYY-MM-DD'), , , ,);
+INSERT INTO Letters(Registration, DateSent, ClerkName, OwnerName, Address, OwnerID) VALUES('06-D-51234', TO_DATE('2009-05-09', 'YYYY-MM-DD'), 'Pepe Hennesy', 'Sean Boomington', '108 Johnstown Avenue',101);
+INSERT INTO Letters(Registration, DateSent, ClerkName, OwnerName, Address, OwnerID) VALUES('12-D-12345', TO_DATE('2013-02-01', 'YYYY-MM-DD'), 'Jimmy Crocket', 'Mark Flanagan', '123 Fake Street', 100);
+INSERT INTO Letters(Registration, DateSent, ClerkName, OwnerName, Address, OwnerID) VALUES('07-W-45123', TO_DATE('2008-01-05', 'YYYY-MM-DD'), 'Brendan Powers', 'Shane Fanning', ,);
 INSERT INTO Letters(Registration, DateSent, ClerkName, OwnerName, Address, OwnerID) VALUES(, TO_DATE('2010-05-09', 'YYYY-MM-DD'), , , ,);
 
 --Mechanic inserts
@@ -88,11 +88,11 @@ INSERT INTO TestPart(PartName, TestPartPassed, PartComment, MechanicName, TestNo
 INSERT INTO TestPart(PartName, TestPartPassed, PartComment, MechanicName, TestNo) VALUES('Brakes', 1, 'Working perfectly!', 'Bertie Ahern', 004);
 INSERT INTO TestPart(PartName, TestPartPassed, PartComment, MechanicName, TestNo) VALUES('Engine', 1, 'Working perfectly!', 'Mark Wahlberg', 004);
 INSERT INTO TestPart(PartName, TestPartPassed, PartComment, MechanicName, TestNo) VALUES('Chasis', 1, 'Working perfectly!', 'Bruce Billson', 004);
-INSERT INTO TestPart(PartName, TestPartPassed, PartComment, MechanicName, TestNo) VALUES('Interior', 0, 'Seats need of replacement!', 'Jimmy Cricket', 004);
+INSERT INTO TestPart(PartName, TestPartPassed, PartComment, MechanicName, TestNo) VALUES('Interior', 0, 'Seats need of replacement!', 'Jiminy Cricket', 004);
 INSERT INTO TestPart(PartName, TestPartPassed, PartComment, MechanicName, TestNo) VALUES('Brakes', 0, 'Brake pads slightly worn', 'Bertie Ahern', 005);
 INSERT INTO TestPart(PartName, TestPartPassed, PartComment, MechanicName, TestNo) VALUES('Engine', 1, 'Working perfectly!', 'Mark Wahlberg', 005);
 INSERT INTO TestPart(PartName, TestPartPassed, PartComment, MechanicName, TestNo) VALUES('Chasis', 1, 'Working perfectly!', 'Bruce Billson', 005);
-INSERT INTO TestPart(PartName, TestPartPassed, PartComment, MechanicName, TestNo) VALUES('Interior', 1, 'Lovely Interior!', 'Jimmy Cricket', 005);
+INSERT INTO TestPart(PartName, TestPartPassed, PartComment, MechanicName, TestNo) VALUES('Interior', 1, 'Lovely Interior!', 'Jiminy Cricket', 005);
 
 
 --Criticality
