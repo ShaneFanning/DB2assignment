@@ -1,9 +1,13 @@
 --Criticality
-INSERT INTO Criticality(CriticalityLevel, PartName, Test_No.) VALUES ("High", "Brakes", 002);
-INSERT INTO Criticality(CriticalityLevel, PartName, Test_No.) VALUES ("Medium", "Engine", 003);
-INSERT INTO Criticality(CriticalityLevel, PartName, Test_No.) VALUES ("High", "Chasis", 003);
-INSERT INTO Criticality(CriticalityLevel, PartName, Test_No.) VALUES ("Low", "Interior", 004);
-INSERT INTO Criticality(CriticalityLevel, PartName, Test_No.) VALUES ("Medium", "Brakes", 005);
+INSERT INTO Criticality(CriticalityLevel, PartName, TestNo) VALUES ('High', 'Brakes', 002);
+INSERT INTO Criticality(CriticalityLevel, PartName, TestNo) VALUES ('High', 'Engine', 003);
+INSERT INTO Criticality(CriticalityLevel, PartName, TestNo) VALUES ('High', 'Chasis', 003);
+INSERT INTO Criticality(CriticalityLevel, PartName, TestNo) VALUES ('Low', 'Interior', 004);
+INSERT INTO Criticality(CriticalityLevel, PartName, TestNo) VALUES ('High', 'Gearbox', 005);
+INSERT INTO Criticality(CriticalityLevel, PartName, TestNo) VALUES ('High', 'Mirrors', 005);
+INSERT INTO Criticality(CriticalityLevel, PartName, TestNo) VALUES ('Medium', 'Door locks', 005);
+INSERT INTO Criticality(CriticalityLevel, PartName, TestNo) VALUES ('High', 'Seat belts', 002);
+INSERT INTO Criticality(CriticalityLevel, PartName, TestNo) VALUES ('High', 'Gearbox', 002);
 
 --Test Part
 INSERT INTO TestPart(PartName, TestPartPassed, PartComment, MechanincName, TestNo) VALUES('Brakes', 1, 'Working perfectly!', 'Baby Goose', 001);
