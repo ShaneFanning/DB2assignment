@@ -122,7 +122,7 @@ CREATE TABLE TestPart
 (
 	PartName             VARCHAR2(20) NOT NULL ,
 	TestPartPassed       NUMBER(1) NULL CHECK(TestPartPassed = 1 or TestPartPassed = 0) ,
-	PartComment           CHAR(18) NULL ,
+	PartComment           CHAR(100) NULL ,
 	MechanicName         VARCHAR2(20) NULL ,
 	TestNo             INTEGER NOT NULL 
 );
