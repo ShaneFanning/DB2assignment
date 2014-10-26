@@ -52,8 +52,8 @@ INSERT INTO ClericalOfficer(ClerkName, CentreName) VALUES('Mike Hunt', 'Swords C
 
 INSERT INTO Letters(Registration, DateSent, ClerkName, OwnerName, Address, OwnerID) VALUES('06-D-51234', TO_DATE('2009-05-09', 'YYYY-MM-DD'), 'Pepe Hennesy', 'Sean Boomington', '108 Johnstown Avenue',101);
 INSERT INTO Letters(Registration, DateSent, ClerkName, OwnerName, Address, OwnerID) VALUES('12-D-12345', TO_DATE('2013-02-01', 'YYYY-MM-DD'), 'Jimmy Crocket', 'Mark Flanagan', '123 Fake Street', 100);
-INSERT INTO Letters(Registration, DateSent, ClerkName, OwnerName, Address, OwnerID) VALUES('07-W-45123', TO_DATE('2008-01-05', 'YYYY-MM-DD'), 'Brendan Powers', 'Shane Fanning', ,);
-INSERT INTO Letters(Registration, DateSent, ClerkName, OwnerName, Address, OwnerID) VALUES(, TO_DATE('2010-05-09', 'YYYY-MM-DD'), , , ,);
+INSERT INTO Letters(Registration, DateSent, ClerkName, OwnerName, Address, OwnerID) VALUES('07-W-45123', TO_DATE('2008-01-05', 'YYYY-MM-DD'), 'Brendan Powers', 'Shane Fanning', '102 Lad Lane', 102);
+INSERT INTO Letters(Registration, DateSent, ClerkName, OwnerName, Address, OwnerID) VALUES('08-KE-34512', TO_DATE('2009-09-04', 'YYYY-MM-DD'), 'Mike Hunt', 'Leslie Knope', '10 Birdwalk Park', 104);
 
 --Mechanic inserts
 
