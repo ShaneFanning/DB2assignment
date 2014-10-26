@@ -50,7 +50,7 @@ INSERT INTO ClericalOfficer(ClerkName, CentreName) VALUES('Mike Hunt', 'Swords C
 
 --Letter inserts
 
-INSERT INTO Letters(Registration, DateSent, ClerkName, OwnerName, Address, OwnerID) VALUES('06-D-51234', TO_DATE('2009-05-09', 'YYYY-MM-DD'), 'Pepe Hennesy', 'Sean Boomington', '108 Johnstown Avenue',101);
+INSERT INTO Letters(Registration, DateSent, ClerkName, OwnerName, Address, OwnerID) VALUES('06-D-51234', TO_DATE('2009-05-09', 'YYYY-MM-DD'), 'Pepe Hennesey', 'Sean Boomington', '108 Johnstown Avenue',101);
 INSERT INTO Letters(Registration, DateSent, ClerkName, OwnerName, Address, OwnerID) VALUES('12-D-12345', TO_DATE('2013-02-01', 'YYYY-MM-DD'), 'Jimmy Crocket', 'Mark Flanagan', '123 Fake Street', 100);
 INSERT INTO Letters(Registration, DateSent, ClerkName, OwnerName, Address, OwnerID) VALUES('07-W-45123', TO_DATE('2008-01-05', 'YYYY-MM-DD'), 'Brendan Powers', 'Shane Fanning', '102 Lad Lane', 102);
 INSERT INTO Letters(Registration, DateSent, ClerkName, OwnerName, Address, OwnerID) VALUES('08-KE-34512', TO_DATE('2009-09-04', 'YYYY-MM-DD'), 'Mike Hunt', 'Leslie Knope', '10 Birdwalk Park', 104);
@@ -73,11 +73,10 @@ INSERT INTO Test(Registration, TestNo, TestDate, CentreName) VALUES('05-D-23456'
 INSERT INTO Test(Registration, TestNo, TestDate, CentreName) VALUES('09-C-62345', 004, TO_DATE('2009-10-05', 'YYYY-MM-DD'), 'Swords Centre');
 INSERT INTO Test(Registration, TestNo, TestDate, CentreName) VALUES('90-D-23451', 005, TO_DATE('1990-03-10', 'YYYY-MM-DD'), 'Swords Centre');
 INSERT INTO Test(Registration, TestNo, TestDate, CentreName) VALUES('12-D-12345', 006, TO_DATE('2012-10-11', 'YYYY-MM-DD'), 'Rathgar Centre');
-INSERT INTO Test(Registration, TestNo, TestDate, CentreName) VALUES('06-D-51234', 006, TO_DATE('2012-08-12', 'YYYY-MM-DD'), 'Swords Centre');
+INSERT INTO Test(Registration, TestNo, TestDate, CentreName) VALUES('06-D-51234', 007, TO_DATE('2012-08-12', 'YYYY-MM-DD'), 'Swords Centre');
 
 --Test Part
 INSERT INTO TestPart(PartName, TestPartPassed, PartComment, MechanicName, TestNo) VALUES('Brakes', 1, 'Brakes were in perfect working order', 'Baby Goose', 001 );
-INSERT INTO TestPart(PartName, TestPartPassed, PartComment, MechanicName, TestNo) VALUES('Brakes', 1, 'Working perfectly!', 'Baby Goose', 001);
 INSERT INTO TestPart(PartName, TestPartPassed, PartComment, MechanicName, TestNo) VALUES('Engine', 1, 'Working perfectly!', 'Jackie Chan', 001);
 INSERT INTO TestPart(PartName, TestPartPassed, PartComment, MechanicName, TestNo) VALUES('Chasis', 1, 'Working perfectly!', 'Ivan Ivanson', 001);
 INSERT INTO TestPart(PartName, TestPartPassed, PartComment, MechanicName, TestNo) VALUES('Engine', 1, 'Working perfectly!', 'Jackie Chan', 002);
@@ -96,12 +95,24 @@ INSERT INTO TestPart(PartName, TestPartPassed, PartComment, MechanicName, TestNo
 
 
 --Criticality
-INSERT INTO Criticality(CriticalityLevel, PartName, TestNo) VALUES ('High', 'Brakes', 002);
+INSERT INTO Criticality(CriticalityLevel, PartName, TestNo) VALUES ('High', 'Brakes', 001);
+INSERT INTO Criticality(CriticalityLevel, PartName, TestNo) VALUES ('High', 'Engine', 001);
+INSERT INTO Criticality(CriticalityLevel, PartName, TestNo) VALUES ('Medium', 'Chasis', 001);
+
+INSERT INTO Criticality(CriticalityLevel, PartName, TestNo) VALUES ('High', 'Engine', 002);
+INSERT INTO Criticality(CriticalityLevel, PartName, TestNo) VALUES ('Medium', 'Chasis', 002);
+
+INSERT INTO Criticality(CriticalityLevel, PartName, TestNo) VALUES ('High', 'Brakes', 003);
 INSERT INTO Criticality(CriticalityLevel, PartName, TestNo) VALUES ('High', 'Engine', 003);
-INSERT INTO Criticality(CriticalityLevel, PartName, TestNo) VALUES ('High', 'Chasis', 003);
+INSERT INTO Criticality(CriticalityLevel, PartName, TestNo) VALUES ('Medium', 'Chasis', 003);
+
+INSERT INTO Criticality(CriticalityLevel, PartName, TestNo) VALUES ('High', 'Brakes', 004);
+INSERT INTO Criticality(CriticalityLevel, PartName, TestNo) VALUES ('High', 'Engine', 004);
+INSERT INTO Criticality(CriticalityLevel, PartName, TestNo) VALUES ('Medium', 'Chasis', 004);
 INSERT INTO Criticality(CriticalityLevel, PartName, TestNo) VALUES ('Low', 'Interior', 004);
-INSERT INTO Criticality(CriticalityLevel, PartName, TestNo) VALUES ('High', 'Gearbox', 005);
-INSERT INTO Criticality(CriticalityLevel, PartName, TestNo) VALUES ('High', 'Mirrors', 005);
-INSERT INTO Criticality(CriticalityLevel, PartName, TestNo) VALUES ('Medium', 'Door locks', 005);
-INSERT INTO Criticality(CriticalityLevel, PartName, TestNo) VALUES ('High', 'Seat belts', 002);
-INSERT INTO Criticality(CriticalityLevel, PartName, TestNo) VALUES ('High', 'Gearbox', 002);
+
+INSERT INTO Criticality(CriticalityLevel, PartName, TestNo) VALUES ('High', 'Brakes', 005);
+INSERT INTO Criticality(CriticalityLevel, PartName, TestNo) VALUES ('High', 'Engine', 005);
+INSERT INTO Criticality(CriticalityLevel, PartName, TestNo) VALUES ('Medium', 'Chasis', 005);
+INSERT INTO Criticality(CriticalityLevel, PartName, TestNo) VALUES ('Low', 'Interior', 005);
+
